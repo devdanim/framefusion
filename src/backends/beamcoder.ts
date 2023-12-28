@@ -3,9 +3,10 @@ import type {
     Demuxer,
     Decoder,
     Filterer,
-    Frame
-} from '@antoinemopa/beamcoder';
-import beamcoder from '@antoinemopa/beamcoder';
+    Frame,
+    VideoInputParam
+} from '@roamhq/beamcoder';
+import beamcoder from '@roamhq/beamcoder';
 import type { ImageData } from 'canvas';
 import { createImageData } from 'canvas';
 import { BaseExtractor } from '../BaseExtractor';
@@ -80,7 +81,7 @@ const createFilter = async({
                 pixelFormat: stream.codecpar.format,
                 timeBase: stream.time_base,
                 pixelAspect: stream.sample_aspect_ratio,
-            },
+            } as VideoInputParam,
         ],
         outputParams: [
             {

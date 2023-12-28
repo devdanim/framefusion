@@ -23,9 +23,4 @@ RUN . "$HOME/.nvm/nvm.sh"\
 ADD . /framefusion
 WORKDIR /framefusion
 
-ENV CPATH="/framefusion/.framefusion-ffmpeg/ffmpeg/include/"
-ENV PKG_CONFIG_PATH="/framefusion/.framefusion-ffmpeg/ffmpeg/lib/pkgconfig/"
-
-RUN ./scripts/install_beamcoder_dependencies.sh
-
 ENTRYPOINT . "$HOME/.nvm/nvm.sh" && yarn install --frozen-lockfile && yarn run test run && yarn run lint

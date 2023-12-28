@@ -1,41 +1,19 @@
+# Fork difference
+
+@roamhq/beamcoder is used to install pre-built binaries of FFmpeg 6.0 
+
 # Framefusion
 
 Dump mp4 frames at specific times in node.
 
 Framefusion is an experimental mp4 frame extraction library based on [beamcoder](https://github.com/Streampunk/beamcoder).
 
-
 ## Installation
 
-## Mac
-
-First, make sure you don't have ffmpeg other than 5
-
-```
-brew uninstall ffmpeg
-```
-
-```
-brew uninstall ffmpeg@6
-```
-
-Then `yarn install` should install any required dependencies:
-
 ```
 yarn install
 ```
 
-## Linux
-
-You need to install ffmpeg libraries before installing. You can refer to [install_beamcoder_dependencies.sh](https://github.com/Lumen5/framefusion/blob/main/scripts/install_beamcoder_dependencies.sh).
-
-When installing, provide the path to ffmpeg (Unless it's already in system path).
-
-```
-export CPATH="/PATH_TO_FFMPEG/include/"
-export PKG_CONFIG_PATH="/PATH_TO_FFMPEG/lib/pkgconfig/"
-yarn install
-```
 
 # Installing in a project
 

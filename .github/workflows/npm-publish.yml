@@ -10,18 +10,15 @@ on:
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
-    env:
-      CPATH: /tmp/framefusion/.framefusion-ffmpeg/ffmpeg/include/
-      PKG_CONFIG_PATH: /tmp/framefusion/.framefusion-ffmpeg/ffmpeg/lib/pkgconfig/
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-          registry-url: https://registry.npmjs.org/
+          registry-url: https://npm.pkg.github.com/
+          scope: "@devdanim"
       - run: mkdir /tmp/framefusion
       - run: cp -r . /tmp/framefusion
-      - run: sudo ./scripts/install_beamcoder_dependencies.sh
         working-directory: /tmp/framefusion
       - run: yarn install --frozen-lockfile
         working-directory: /tmp/framefusion
@@ -30,4 +27,5 @@ jobs:
       - run: yarn publish
         working-directory: /tmp/framefusion
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
