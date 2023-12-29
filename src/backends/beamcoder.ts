@@ -4,7 +4,8 @@ import type {
     Decoder,
     Filterer,
     Frame,
-    VideoInputParam
+    VideoInputParam,
+    Stream
 } from '@danim/beamcoder';
 import beamcoder from '@danim/beamcoder';
 import type { ImageData } from 'canvas';
@@ -194,7 +195,7 @@ export class BeamcoderExtractor extends BaseExtractor implements Extractor {
             throw new Error(`File has no ${STREAM_TYPE_VIDEO} stream!`);
         }
         this.#filterer = await createFilter({
-            stream: this.#demuxer.streams[this.#streamIndex],
+            stream: this.stream,
             outputPixelFormat: COLORSPACE_RGBA,
         });
     }
@@ -217,21 +218,28 @@ export class BeamcoderExtractor extends BaseExtractor implements Extractor {
      * This is the duration of the first video stream in the file expressed in seconds.
      */
     get duration(): number {
-        return this.ptsToTime(this.#demuxer.streams[this.#streamIndex].duration);
+        return this.ptsToTime(this.stream.duration);
     }
 
     /**
      * Width in pixels
      */
     get width(): number {
-        return this.#demuxer.streams[this.#streamIndex].codecpar.width;
+        return this.stream.codecpar.width;
     }
 
     /**
      * Height in pixels
      */
     get height(): number {
-        return this.#demuxer.streams[this.#streamIndex].codecpar.height;
+        return this.stream.codecpar.height;
+    }
+
+    /**
+     * beamcoder Stream
+     */
+    get stream(): Stream {
+        return this.#demuxer.streams[this.#streamIndex];
     }
 
     /**
@@ -269,7 +277,7 @@ export class BeamcoderExtractor extends BaseExtractor implements Extractor {
      * Get the presentation timestamp (PTS) for a given time in seconds
      */
     _timeToPTS(time: number) {
-        const time_base = this.#demuxer.streams[this.#streamIndex].time_base;
+        const time_base = this.stream.time_base;
         return time * time_base[1] / time_base[0];
     }
 
@@ -277,7 +285,7 @@ export class BeamcoderExtractor extends BaseExtractor implements Extractor {
      * Get the time in seconds from a given presentation timestamp (PTS)
      */
     ptsToTime(pts: number) {
-        const time_base = this.#demuxer.streams[this.#streamIndex].time_base;
+        const time_base = this.stream.time_base;
         return pts * time_base[0] / time_base[1];
     }
 

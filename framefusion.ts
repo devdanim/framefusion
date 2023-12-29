@@ -1,4 +1,5 @@
 import type { ImageData } from 'canvas';
+import type { Stream } from '@danim/beamcoder';
 import { BeamcoderExtractor } from './src/backends/beamcoder.js';
 
 export type Frame = {
@@ -32,6 +33,8 @@ export interface Extractor {
     get width(): number;
 
     get height(): number;
+
+    get stream(): Stream;
 
     getFrameAtTime(targetTime: number): Promise<Frame>;
 

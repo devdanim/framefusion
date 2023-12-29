@@ -1,10 +1,12 @@
 import type { ImageData } from 'canvas';
+import type { Stream } from '@danim/beamcoder';
 
 import type {
     ExtractorArgs,
     Frame,
     Extractor
 } from '../framefusion';
+
 
 export class BaseExtractor implements Extractor {
     static async create(args: ExtractorArgs): Promise<Extractor> {
@@ -31,6 +33,10 @@ export class BaseExtractor implements Extractor {
     }
 
     get height(): number {
+        throw new Error('Not implemented');
+    }
+
+    get stream(): Stream {
         throw new Error('Not implemented');
     }
 
