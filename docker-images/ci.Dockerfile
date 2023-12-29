@@ -4,7 +4,7 @@ WORKDIR /ffmpeg-temp
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get -y install libavcodec-dev libavformat-dev libavdevice-dev libavfilter-dev libavutil-dev libpostproc-dev libswresample-dev libswscale-dev
+RUN apt-get update && apt-get -y install wget libavcodec-dev libavformat-dev libavdevice-dev libavfilter-dev libavutil-dev libpostproc-dev libswresample-dev libswscale-dev
 # When host is ARM (M1), the ubuntu image needs a few more dependencies
 # RUN apt-get update && apt-get -y install wget xz-utils python3 build-essential pkg-config libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 
