@@ -10,7 +10,10 @@ Framefusion is an experimental mp4 frame extraction library based on [beamcoder]
 
 ## Installation
 
-```
+```bash
+# Only on Ubuntu (23.10 for compatibility with FFmpeg 6)
+sudo apt-get install libavcodec-dev libavformat-dev libavdevice-dev libavfilter-dev libavutil-dev libpostproc-dev libswresample-dev libswscale-dev
+# Ubuntu and Win
 yarn install
 ```
 
