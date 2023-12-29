@@ -1,6 +1,6 @@
 # Fork difference
 
-[@roamhq/beamcoder](https://www.npmjs.com/package/@roamhq/beamcoder) is used to install pre-built binaries of FFmpeg 6.0 
+[@danim/beamcoder](https://www.npmjs.com/package/@danim/beamcoder) is used to install pre-built binaries of FFmpeg 6
 
 # Framefusion
 

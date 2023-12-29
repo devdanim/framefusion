@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:mantic
 
 WORKDIR /ffmpeg-temp
 

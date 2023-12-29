@@ -7,6 +7,24 @@
   resolved "https://registry.npmjs.org/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
+"@danim/beamcoder-linux-x64@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@danim/beamcoder-linux-x64/-/beamcoder-linux-x64-0.8.0.tgz#3639d5b23149ba713a7f30d67da803e51bf661db"
+  integrity sha512-pkkHWcQilfFUCThrEpBRro1elLFHS6+43oZQ5xp4foIn99DlTq75InGq1G/rb/T/o/OrUIE+L3yN8WVWWiRAng==
+
+"@danim/beamcoder-win32-x64@0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@danim/beamcoder-win32-x64/-/beamcoder-win32-x64-0.8.1.tgz#118685fcb2adaff8d13cf9f2dbac305707b829f8"
+  integrity sha512-YV6+3A6k7XYNDXywGK6qdn9+TxkWdRQZvTWI5YnBzshjHrwqVxwI0SdkkEZ5kckNM7JI4o+R0zjMFIpFuLeOgg==
+
+"@danim/beamcoder@^0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@danim/beamcoder/-/beamcoder-0.8.3.tgz#d83d79fc3137129c21409cee6f539b65d2b125d8"
+  integrity sha512-q/CjbeUf14MrOU9xBtxz+9vfRT09N3DD1/ilJx6evypF75PKSurzcdYIwjDK0k8QzElhAupi5ooCJoaCGWIXEg==
+  optionalDependencies:
+    "@danim/beamcoder-linux-x64" "0.8.0"
+    "@danim/beamcoder-win32-x64" "0.8.1"
+
 "@esbuild/android-arm64@0.18.20":
   version "0.18.20"
   resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.18.20.tgz#984b4f9c8d0377443cc2dfcef266d02244593622"
@@ -208,36 +226,6 @@
   version "1.0.0-next.24"
   resolved "https://registry.npmjs.org/@polka/url/-/url-1.0.0-next.24.tgz"
   integrity sha512-2LuNTFBIO0m7kKIQvvPHN6UE63VjpmL9rnEEaOOaiSPbZK+zUOYIzBAWcED+3XYzhYsd/0mD57VdxAEqqV52CQ==
-
-"@roamhq/beamcoder-darwin-arm64@0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@roamhq/beamcoder-darwin-arm64/-/beamcoder-darwin-arm64-0.8.1.tgz#7a6fa1d98f1e6c44547e963d1ed8b89ef491ab93"
-  integrity sha512-FTF399szRUwo49VesJaTLU7DC6K/QYUJkczQN3E+d+YFQyJeLKgUINQ236z8cX+dRxWwOuY01EKMnQIEZzTNKQ==
-
-"@roamhq/beamcoder-darwin-x64@0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@roamhq/beamcoder-darwin-x64/-/beamcoder-darwin-x64-0.8.0.tgz#1c17d147d36f62e8504b3b69dea323339f831dfc"
-  integrity sha512-v3UIq6T8HehLkTenlLyQ5ZUVCI9m71WaZtr3rsluvUipQLKjSMs+GDDKi4fk2ih6XVFJiBMlNRlXTOXxfpoB7g==
-
-"@roamhq/beamcoder-linux-x64@0.8.0":
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/@roamhq/beamcoder-linux-x64/-/beamcoder-linux-x64-0.8.0.tgz#e60f63a456068efbaa4858faee9a06f8ad9f5fd5"
-  integrity sha512-HUsCXmVb6NKbvQH2To02A/uhO+sd3aV+y4ukYeGxavuDjXHX1p36ZbCHH3J3Jgt5PZSM6uKqWGxQgrmbbdmIdw==
-
-"@roamhq/beamcoder-win32-x64@0.8.1":
-  version "0.8.1"
-  resolved "https://registry.npmjs.org/@roamhq/beamcoder-win32-x64/-/beamcoder-win32-x64-0.8.1.tgz"
-  integrity sha512-WMUwzdmdU2uVMfhpXdfw3QCr0IGRB26MQfSXre5VpHumlf7yVY9z5A8ggUNqOu+pA1ZO6LU6TZ+d8j5qiWFhDg==
-
-"@roamhq/beamcoder@^0.8.2":
-  version "0.8.2"
-  resolved "https://registry.npmjs.org/@roamhq/beamcoder/-/beamcoder-0.8.2.tgz"
-  integrity sha512-9gCNA72J5F7Gx5PoiK6W3pjtAchCoAgpvnLR/jno4RWesFANvlkwPy8EKkra9eSLs0IpKcqhUlOw3JJlDCDA3Q==
-  optionalDependencies:
-    "@roamhq/beamcoder-darwin-arm64" "0.8.1"
-    "@roamhq/beamcoder-darwin-x64" "0.8.0"
-    "@roamhq/beamcoder-linux-x64" "0.8.0"
-    "@roamhq/beamcoder-win32-x64" "0.8.1"
 
 "@rollup/pluginutils@^4.2.1":
   version "4.2.1"

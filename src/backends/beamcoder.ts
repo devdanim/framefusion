@@ -5,8 +5,8 @@ import type {
     Filterer,
     Frame,
     VideoInputParam
-} from '@roamhq/beamcoder';
-import beamcoder from '@roamhq/beamcoder';
+} from '@danim/beamcoder';
+import beamcoder from '@danim/beamcoder';
 import type { ImageData } from 'canvas';
 import { createImageData } from 'canvas';
 import { BaseExtractor } from '../BaseExtractor';
