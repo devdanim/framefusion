@@ -58,19 +58,19 @@ export interface Extractor {
 //
 // Example:
 //
-// const TEST_VIDEO = './samples/bbb10m.mp4';
-// export const run = async() => {
-//     // Arrange
-//     const extractor = await BeamcoderExtractor.create({
-//         inputFileOrUrl: TEST_VIDEO,
-//     });
-//
-//     const frame = await extractor.getImageDataAtTime(0.3);
-//     console.log(frame);
-//     extractor.dispose();
-// };
-//
-// run();
-//
+const TEST_VIDEO = './samples/tmp.mp4';
+export const run = async() => {
+    // Arrange
+    const extractor = await BeamcoderExtractor.create({
+        inputFileOrUrl: TEST_VIDEO,
+    });
+
+    const frame = await extractor.getImageDataAtTime(230.63333333333335);
+    console.log(frame);
+    extractor.dispose();
+};
+
+run();
+
 
 export { BeamcoderExtractor };
