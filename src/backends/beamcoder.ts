@@ -382,7 +382,7 @@ export class BeamcoderExtractor extends BaseExtractor implements Extractor {
 
                 // The packet contains frames, but all of them have PTS larger than our a targetPTS (we looked too far)
                 if (!closestFrame) {
-                    return outputFrame || (filteredFrames.reduce((nearest, current) => (Math.abs(current.pts - targetPTS) < Math.abs(nearest.pts - targetPTS) ? current : nearest), filteredFrames[0]) ?? null);
+                    return outputFrame || (filteredFrames.reduce((nearest, current) => (Math.abs(current.pts - targetPTS) < Math.abs(nearest.pts - targetPTS) ? current : nearest), filteredFrames[0]) || null);
                 }
 
                 // store the filtered packet frames for later reuse
