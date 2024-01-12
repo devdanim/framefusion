@@ -1,5 +1,5 @@
 import type { Stream } from '@danim/beamcoder';
-import type { ImageData } from './src/type';
+import type { ImageData } from './src/types';
 import { BeamcoderExtractor } from './src/backends/beamcoder.js';
 
 export type Frame = {
