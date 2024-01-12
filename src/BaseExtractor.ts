@@ -1,11 +1,10 @@
-import type { ImageData } from 'canvas';
 import type { Stream } from '@danim/beamcoder';
-
 import type {
     ExtractorArgs,
     Frame,
     Extractor
 } from '../framefusion';
+import type { ImageData } from './types';
 
 
 export class BaseExtractor implements Extractor {
